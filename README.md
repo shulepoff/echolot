@@ -3,13 +3,13 @@
 
 ## Install
 ```bash
-mkdir project
-cd project
-python3 -m venv env 
-pip3 install -r requirements.txt
 git clone https://github.com/shulepoff/echolot.git
+cd echolot
+python3 -m venv env 
+source env/bin/activate
+pip3 install -r requirements.txt
 ```
-# Run application
+## Run application
 ```bash
 gunicorn -b :8000 foobar:app
 ```
