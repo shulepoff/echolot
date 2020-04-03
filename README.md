@@ -1,3 +1,4 @@
 # Echolot
 Test Application API
-Returns list of users
+
+Returns list of users. 
