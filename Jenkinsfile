@@ -7,8 +7,15 @@ pipeline {
     stages {
       stage('install') {
         steps {
-          sh 'pip install -r requirements.txt'
+	  sh 'python3 -m venv env'
+	  sh 'source env/bin/activate'
+          sh 'pip3 install -r requirements.txt'
         }
+      }
+      stage('run') {
+	steps{
+	 sh 'gunicorn -b :8000 foobar:app 
+	}
       }
     }
 }
