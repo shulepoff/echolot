@@ -16,7 +16,10 @@ pipeline {
       }
       stage('run') {
 	steps{
-	 sh 'gunicorn -b :8000 foobar:app'
+	 sh """
+	 . ./env/bin/activate
+	 gunicorn -b :8000 foobar:app
+	 """
 	}
       }
     }
