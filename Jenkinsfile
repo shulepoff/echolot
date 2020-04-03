@@ -14,13 +14,5 @@ pipeline {
 	  """
         }
       }
-      stage('run') {
-	steps{
-	 sh """
-	 . ./env/bin/activate
-	 gunicorn -b :8000 foobar:app
-	 """
-	}
-      }
     }
 }
