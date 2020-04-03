@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sqlite3
 import json
 
@@ -10,6 +12,7 @@ def app(env,start_response):
     ]
     start_response(status, response_headers)
     return iter([data])
+
 def get_users():
     con = sqlite3.connect('shosser.db')
     cur = con.cursor()
