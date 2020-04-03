@@ -12,7 +12,6 @@ pipeline {
 	  python3 -m venv env
 	  . ./env/bin/activate
           pip3 install -r requirements.txt
-	  gunicorn -b :8000 foobar:app
 	  """
         }
       }
