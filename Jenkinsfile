@@ -1,11 +1,8 @@
 pipeline {
-    agent { 
-        docker { 
-           image 'python:3.7.2'
-	   args '--network host'
-        }
-    }
     stages {
+      stage('Clone sources') {
+	 git url:'https://github.com/shulepoff/echolot.git'
+      }
       stage('install') {
         steps {
 	  sh """
