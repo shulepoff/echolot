@@ -1,7 +1,9 @@
 pipeline {
     stages {
       stage('Clone sources') {
-	 git url:'https://github.com/shulepoff/echolot.git'
+	      steps {
+	 	git url:'https://github.com/shulepoff/echolot.git'
+	      }
       }
       stage('install') {
         steps {
