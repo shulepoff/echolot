@@ -1,9 +1,8 @@
 node {
-    stages {
       stage('Clone sources') {
-	      steps {
-	 	git url:'https://github.com/shulepoff/echolot.git'
-	      }
+	 steps {
+	   git url:'https://github.com/shulepoff/echolot.git'
+	 }
       }
       stage('install') {
         steps {
@@ -14,5 +13,4 @@ node {
 	  """
         }
       }
-    }
 }
