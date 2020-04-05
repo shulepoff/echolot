@@ -4,7 +4,7 @@ import sqlite3
 import json
 
 def app(env,start_response):
-    data = get_users().encode('urf-8')
+    data = get_users().encode('utf-8')
     status = '200 OK'
     response_headers = [
             ('Content-type', 'text/plain'),
