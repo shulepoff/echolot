@@ -1,4 +1,4 @@
-node {
+node ("worker_node1"){
       stage('Clone sources') {
 	git url:'https://github.com/shulepoff/echolot.git'
       }
