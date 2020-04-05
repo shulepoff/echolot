@@ -4,7 +4,7 @@ import sqlite3
 import json
 
 def app(env,start_response):
-    data = get_users()
+    data = get_users().encode('utf-8')
     status = '200 OK'
     response_headers = [
             ('Content-type', 'text/plain'),
@@ -19,4 +19,4 @@ def get_users():
     query = 'SELECT * FROM users;' 
     result = cur.execute(query)
     users = [dict(zip([key[0] for key in cur.description], row)) for row in result]
-    return json.dumps({'users': users}).encode('utf-8')
+    return json.dumps({'users': users})
