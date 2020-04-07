@@ -4,6 +4,7 @@ import sqlite3
 import json
 
 def app(env,start_response):
+    """ Test application. Return list of users in JSON format on HTTP proto"""
     data = get_users().encode('utf-8')
     status = '200 OK'
     response_headers = [
@@ -14,6 +15,7 @@ def app(env,start_response):
     return iter([data])
 
 def get_users():
+    """ Get user list from sqlite3 DB. Return json """
     con = sqlite3.connect('shosser.db')
     cur = con.cursor()
     query = 'SELECT * FROM users;' 
