@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+""" Basic application for test Jenkins, Docker, """
 import sqlite3
 import json
 
