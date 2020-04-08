@@ -5,6 +5,7 @@ import json
 
 def app(env, start_response):
     """ Test application. Return list of users in JSON format on HTTP proto"""
+    #pylint: disable=unused-argument
     data = get_users().encode('utf-8')
     status = '200 OK'
     response_headers = [
