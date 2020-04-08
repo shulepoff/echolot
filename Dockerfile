@@ -5,6 +5,6 @@ WORKDIR /
 COPY foobar.py /
 COPY shosser.db /
 COPY run.sh /
-EXPOSE 9090 9191
+EXPOSE 8000 
 USER gunicorn
 CMD ["/run.sh"]
