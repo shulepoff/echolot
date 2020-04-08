@@ -13,5 +13,11 @@ pip3 install -r requirements.txt
 ```bash
 gunicorn -b :8000 foobar:app
 ```
+## Run in Docker
+```bash
+docker build -t echolot .
+docker run -d --rm --name echolot -p 8000:8000 echolot
+```
+
 ## Result 
 ![Screenshot](/assets/result.png)
