@@ -10,7 +10,7 @@ node {
         sh "docker build -t echolot ."
     }
     stage('Run Docker'){
-	sh "docker stop echolot"
-        sh "docker run -d --rm --name echolot -p 8000:8000 echolot"
+	sh 'if [ "$(docker ps -f name=echolot -q)" ]; then docker stop echolot ; fi'
+        sh 'docker run -d --rm --name echolot -p 8000:8000 echolot'
     }
 }
