@@ -1,7 +1,5 @@
 node {
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-    }
+    properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10']]]);
     stage('Clone source'){
         git branch: 'master',
             url:'https://github.com/shulepoff/echolot.git'
