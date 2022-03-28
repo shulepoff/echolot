@@ -1,5 +1,5 @@
 # Echolot
-Тестовое приложение. Hello World
+Тестовое приложение. Hello World. Для ознакомления с технологиями CI/CD
 
 ## Install
 ```bash
